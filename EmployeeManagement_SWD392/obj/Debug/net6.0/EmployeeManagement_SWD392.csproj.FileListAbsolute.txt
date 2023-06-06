@@ -1,0 +1,14 @@
+C:\Users\Nea\source\repos\Test\PRN221_EmployeeManagement\EmployeeManagement_SWD392\bin\Debug\net6.0\EmployeeManagement_SWD392.deps.json
+C:\Users\Nea\source\repos\Test\PRN221_EmployeeManagement\EmployeeManagement_SWD392\bin\Debug\net6.0\EmployeeManagement_SWD392.runtimeconfig.json
+C:\Users\Nea\source\repos\Test\PRN221_EmployeeManagement\EmployeeManagement_SWD392\bin\Debug\net6.0\EmployeeManagement_SWD392.dll
+C:\Users\Nea\source\repos\Test\PRN221_EmployeeManagement\EmployeeManagement_SWD392\bin\Debug\net6.0\EmployeeManagement_SWD392.pdb
+C:\Users\Nea\source\repos\Test\PRN221_EmployeeManagement\EmployeeManagement_SWD392\obj\Debug\net6.0\EmployeeManagement_SWD392.csproj.AssemblyReference.cache
+C:\Users\Nea\source\repos\Test\PRN221_EmployeeManagement\EmployeeManagement_SWD392\obj\Debug\net6.0\EmployeeManagement_SWD392.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Nea\source\repos\Test\PRN221_EmployeeManagement\EmployeeManagement_SWD392\obj\Debug\net6.0\EmployeeManagement_SWD392.AssemblyInfoInputs.cache
+C:\Users\Nea\source\repos\Test\PRN221_EmployeeManagement\EmployeeManagement_SWD392\obj\Debug\net6.0\EmployeeManagement_SWD392.AssemblyInfo.cs
+C:\Users\Nea\source\repos\Test\PRN221_EmployeeManagement\EmployeeManagement_SWD392\obj\Debug\net6.0\EmployeeManagement_SWD392.csproj.CoreCompileInputs.cache
+C:\Users\Nea\source\repos\Test\PRN221_EmployeeManagement\EmployeeManagement_SWD392\obj\Debug\net6.0\EmployeeManagement_SWD392.dll
+C:\Users\Nea\source\repos\Test\PRN221_EmployeeManagement\EmployeeManagement_SWD392\obj\Debug\net6.0\refint\EmployeeManagement_SWD392.dll
+C:\Users\Nea\source\repos\Test\PRN221_EmployeeManagement\EmployeeManagement_SWD392\obj\Debug\net6.0\EmployeeManagement_SWD392.pdb
+C:\Users\Nea\source\repos\Test\PRN221_EmployeeManagement\EmployeeManagement_SWD392\obj\Debug\net6.0\EmployeeManagement_SWD392.genruntimeconfig.cache
+C:\Users\Nea\source\repos\Test\PRN221_EmployeeManagement\EmployeeManagement_SWD392\obj\Debug\net6.0\ref\EmployeeManagement_SWD392.dll
