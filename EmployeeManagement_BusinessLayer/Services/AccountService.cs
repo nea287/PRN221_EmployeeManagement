@@ -72,7 +72,7 @@ namespace EmployeeManagement_BusinessLayer.Services
                     throw new Exception(Constraints.NOT_FOUND_ACCOUNT);
                 }
 
-                account.Salary = 0;
+                account.Status = 0;
 
                 _context.Entry(account).State = EntityState.Detached;
                 _context.Entry(account).State = EntityState.Modified;

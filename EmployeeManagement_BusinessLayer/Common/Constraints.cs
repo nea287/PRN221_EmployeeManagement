@@ -26,5 +26,15 @@ namespace EmployeeManagement_BusinessLayer.Common
         public const int LimitPaging = 500;
         public const int DefaultPage = 1;
 
+        //Employee
+        public const string NOT_FOUND_EMPLOYEE = "Không tìm thấy nhân viên phù hợp với thông tin";
+        public const string SUC_UPDATE_EMPLOYEE = "Cập nhật tài khoản thành công!";
+        public const string FAILED_UPDATE_EMPLOYEE = "Cập nhật thông tin nhân viên thành công!";
+        public const string SUC_CREATE_EMPLOYEE = "Tạo nhân viên mới thành công!";
+        public const string FAILED_CREATE_EMPLOYEE = "Tạo nhân viên mới thất bại!";
+        public const string SUC_DELETE_EMPLOYEE = "Xóa nhân viên thành công!";
+        public const string FAILED_DELETE_EMPLOYEE = "Xóa nhân viên thất bại!";
+        public const string EXISTED_EMPLOYEE = "Nhân viên đã tồn tại!";
+
     }
 }
