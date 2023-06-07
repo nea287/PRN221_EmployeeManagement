@@ -113,10 +113,10 @@ namespace EmployeeManagement_BusinessLayer.Services
 
         public DynamicModelResponse.DynamicModelsResponse<EmployeeViewModel> GetEmployees(int page, int size)
         {
-            (int, IQueryable<EmployeeViewModel>) pagingAccount;
+            (int, IQueryable<EmployeeViewModel>) pagingEmployee;
             try
             {
-                pagingAccount = _context.Employees.Where(x => x.Status != 0)
+                pagingEmployee = _context.Employees.Where(x => x.Status != 0)
                     .ProjectTo<EmployeeViewModel>(_mapper.ConfigurationProvider)
                     .PagingIQueryable(page, size, Constraints.LimitPaging, Constraints.DefaultPaging);
             }
@@ -131,9 +131,9 @@ namespace EmployeeManagement_BusinessLayer.Services
                 {
                     Page = page,
                     Size = size,
-                    Total = pagingAccount.Item1
+                    Total = pagingEmployee.Item1
                 },
-                Results = pagingAccount.Item2.ToList()
+                Results = pagingEmployee.Item2.ToList()
             };
         }
 
@@ -159,12 +159,12 @@ namespace EmployeeManagement_BusinessLayer.Services
             }
             catch (Exception ex)
             {
-                throw new Exception(Constraints.FAILED_UPDATE);
+                throw new Exception(Constraints.FAILED_UPDATE_EMPLOYEE);
             }
 
             return new ResponseResult<EmployeeViewModel>()
             {
-                Message = Constraints.SUC_UPDATE,
+                Message = Constraints.SUC_UPDATE_EMPLOYEE,
                 Value = _mapper.Map<EmployeeViewModel>(emp)
             };
         }

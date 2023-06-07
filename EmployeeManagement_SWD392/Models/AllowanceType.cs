@@ -14,6 +14,7 @@ namespace EmployeeManagement_SWD392.Models
         public string? AllowanceTypeName { get; set; }
         public string? AllowanceTypeDescription { get; set; }
         public decimal? AllowanceAmount { get; set; }
+        public int? Status { get;set; }
 
         public virtual ICollection<Allowance> Allowances { get; set; }
     }

@@ -45,6 +45,15 @@ namespace EmployeeManagement_BusinessLayer.Common
         public const string SUC_DELETE_BENEFIT = "Xóa thông tin phúc lợi thành công!";
         public const string FAILED_DELETE_BENEFIT = "Xóa thông tin phúc lợi thất bại!";
         public const string EXISTED_BENEFIT = "Tồn tại phúc lợi!";
+        //Allowance
+        public const string NOT_FOUND_ALLOWANCE = "Không tìm thấy trợ cấp với thông tin tương ứng!";
+        public const string SUC_UPDATE_ALLOWANCE = "Cập nhật thông tin trợ cấp thành công!";
+        public const string FAILED_UDPATE_ALLOWANCE = "Cập nhật thông tin trợ cấp mới thất bại rồi!";
+        public const string SUC_CREATE_ALLOWANCE = "Tạo trợ cấp mới thành công!";
+        public const string FAILED_CREATE_ALLOWANCE = "Tạo trợ cấp mới thất bại!";
+        public const string SUC_DELETE_ALLOWANCE = "Xóa thông tin trợ cấp thành công!";
+        public const string FAILED_DELETE_ALLOWANCE = "Xóa thông tin trợ cấp thất bại!";
+        public const string EXISTED_ALLOWANCE = "Tồn tại trợ cấp!";
 
     }
 }

@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace EmployeeManagement_SWD392.Models
+namespace EmployeeManagement_BusinessLayer.ViewModels
 {
-    public partial class Allowance
+    public class AllowanceViewModel
     {
         public int AllowanceId { get; set; }
         public string? EmployeeId { get; set; }
@@ -11,7 +14,5 @@ namespace EmployeeManagement_SWD392.Models
         public DateTime? AllowanceDate { get; set; }
         public string? Remarks { get; set; }
         public int? Status { get; set; }
-        public virtual AllowanceType? AllowanceType { get; set; }
-        public virtual Employee? Employee { get; set; }
     }
 }
