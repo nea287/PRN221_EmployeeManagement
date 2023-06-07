@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace EmployeeManagement_SWD392.Models
+namespace EmployeeManagement_BusinessLayer.ViewModels
 {
-    public partial class Benefit
+    public class BenefitViewModel
     {
         public int BenefitId { get; set; }
         public string? EmployeeId { get; set; }
         public DateTime? ReceivedDate { get; set; }
         public string? Remarks { get; set; }
         public int? BenefitTypeId { get; set; }
-        public int? Status { get; set; }
-        public virtual BenefitType? BenefitType { get; set; }
-        public virtual Employee? Employee { get; set; }
     }
 }

@@ -11,6 +11,7 @@ using Microsoft.VisualBasic;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -33,7 +34,7 @@ namespace EmployeeManagement_BusinessLayer.Services
             try
             {
                 account = _context.Accounts
-                    .FirstOrDefault(x => x.Username.Equals(acc.Username));
+                    .FirstOrDefault(x => x.Username.Equals(acc.Username) && x.Status != 0);
 
                 if(account != null)
                 {
@@ -56,7 +57,7 @@ namespace EmployeeManagement_BusinessLayer.Services
 
                 Value = _mapper.Map<AccountViewModel>(
                     _context.Accounts.FirstOrDefault(
-                        x => x.Username.Equals(acc.Username)))
+                        x => x.Username.Equals(acc.Username)&& x.Status != 0 ))
             };
         }
 
@@ -65,7 +66,7 @@ namespace EmployeeManagement_BusinessLayer.Services
             try
             {
                 Account account = _context.Accounts
-                    .FirstOrDefault(x => x.AccountId == accID);
+                    .FirstOrDefault(x => x.AccountId == accID && x.Status != 0);
                 
                 if(account == null)
                 {
@@ -93,7 +94,7 @@ namespace EmployeeManagement_BusinessLayer.Services
             try
             {
                 account = _context.Accounts.FirstOrDefault(
-                        x => x.AccountId == accID);
+                        x => x.AccountId == accID && x.Status != 0);
 
             }catch(Exception ex)
             {
@@ -146,7 +147,7 @@ namespace EmployeeManagement_BusinessLayer.Services
 
                 account = _context.Accounts.FirstOrDefault(
                     x => x.Username.Equals(username) 
-                    && x.Password.Equals(password));
+                    && x.Password.Equals(password) && x.Status != 0);
                 
             }catch(Exception ex)
             {
@@ -172,7 +173,7 @@ namespace EmployeeManagement_BusinessLayer.Services
             try
             {
                 var findAccount = _context.Accounts
-                    .FirstOrDefault(x => x.AccountId == acc.AccountId);
+                    .FirstOrDefault(x => x.AccountId == acc.AccountId && x.Status != 0);
 
                 if(findAccount == null)
                 {

@@ -14,7 +14,7 @@ namespace EmployeeManagement_SWD392.Models
         public string? BenefitTypeName { get; set; }
         public string? Description { get; set; }
         public decimal? BenefitAmount { get; set; }
-
+        public int? Status { get; set; }    
         public virtual ICollection<Benefit> Benefits { get; set; }
     }
 }

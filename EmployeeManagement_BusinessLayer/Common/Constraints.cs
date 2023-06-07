@@ -36,5 +36,15 @@ namespace EmployeeManagement_BusinessLayer.Common
         public const string FAILED_DELETE_EMPLOYEE = "Xóa nhân viên thất bại!";
         public const string EXISTED_EMPLOYEE = "Nhân viên đã tồn tại!";
 
+        //Benefit
+        public const string NOT_FOUND_BENEFIT = "Không tìm thấy phúc lợi với thông tin tương ứng!";
+        public const string SUC_UPDATE_BENEFIT = "Cập nhật thông tin phúc lợi thành công!";
+        public const string FAILED_UDPATE_BENEFIT = "Cập nhật thông tin phúc lợi mới thất bại rồi!";
+        public const string SUC_CREATE_BENEFIT = "Tạo phúc lợi mới thành công!";
+        public const string FAILED_CREATE_BENEFIT = "Tạo phúc lợi mới thất bại!";
+        public const string SUC_DELETE_BENEFIT = "Xóa thông tin phúc lợi thành công!";
+        public const string FAILED_DELETE_BENEFIT = "Xóa thông tin phúc lợi thất bại!";
+        public const string EXISTED_BENEFIT = "Tồn tại phúc lợi!";
+
     }
 }

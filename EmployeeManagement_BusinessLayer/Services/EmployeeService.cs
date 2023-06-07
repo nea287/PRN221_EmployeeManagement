@@ -32,7 +32,7 @@ namespace EmployeeManagement_BusinessLayer.Services
             try
             {
                 emp1 = _context.Employees
-                    .FirstOrDefault(x => x.EmployeeId.Equals(emp.EmployeeId));
+                    .FirstOrDefault(x => x.EmployeeId.Equals(emp.EmployeeId) && x.Status != 0);
 
                 if (emp != null)
                 {
@@ -56,7 +56,7 @@ namespace EmployeeManagement_BusinessLayer.Services
 
                 Value = _mapper.Map<EmployeeViewModel>(
                     _context.Accounts.FirstOrDefault(
-                        x => x.EmployeeId.Equals(emp.EmployeeId)))
+                        x => x.EmployeeId.Equals(emp.EmployeeId) && x.Status != 0))
             };
         }
 
@@ -65,7 +65,7 @@ namespace EmployeeManagement_BusinessLayer.Services
             try
             {
                 Employee emp = _context.Employees
-                    .FirstOrDefault(x => x.EmployeeId.Equals(empCode));
+                    .FirstOrDefault(x => x.EmployeeId.Equals(empCode) && x.Status != 0);
 
                 if (emp == null)
                 {
@@ -77,7 +77,7 @@ namespace EmployeeManagement_BusinessLayer.Services
                 _context.Entry(emp).State = EntityState.Detached;
                 _context.Entry(emp).State = EntityState.Modified;
 
-                _context.Accounts.Update(emp);
+                _context.Employees.Update(emp);
                 _context.SaveChanges();
 
             }
@@ -94,7 +94,7 @@ namespace EmployeeManagement_BusinessLayer.Services
             try
             {
                 emp = _context.Employees.FirstOrDefault(
-                        x => x.EmployeeId == empCode);
+                        x => x.EmployeeId.Equals(empCode) && x.Status != 0);
 
             }
             catch (Exception ex)
@@ -142,7 +142,7 @@ namespace EmployeeManagement_BusinessLayer.Services
             try
             {
                 var findEmployee = _context.Employees
-                    .FirstOrDefault(x => x.EmployeeId.Equals(emp.EmployeeId));
+                    .FirstOrDefault(x => x.EmployeeId.Equals(emp.EmployeeId) && x.Status!= 0);
 
                 if (findEmployee == null)
                 {
@@ -162,10 +162,10 @@ namespace EmployeeManagement_BusinessLayer.Services
                 throw new Exception(Constraints.FAILED_UPDATE);
             }
 
-            return new ResponseResult<AccountViewModel>()
+            return new ResponseResult<EmployeeViewModel>()
             {
                 Message = Constraints.SUC_UPDATE,
-                Value = _mapper.Map<AccountViewModel>(acc)
+                Value = _mapper.Map<EmployeeViewModel>(emp)
             };
         }
     }
