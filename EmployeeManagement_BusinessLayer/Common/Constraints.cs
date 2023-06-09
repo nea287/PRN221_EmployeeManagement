@@ -54,6 +54,15 @@ namespace EmployeeManagement_BusinessLayer.Common
         public const string SUC_DELETE_ALLOWANCE = "Xóa thông tin trợ cấp thành công!";
         public const string FAILED_DELETE_ALLOWANCE = "Xóa thông tin trợ cấp thất bại!";
         public const string EXISTED_ALLOWANCE = "Tồn tại trợ cấp!";
+        //achievement
+        public const string NOT_FOUND_ACHIEVEMENT = "Không tìm thấy thành tựu với thông tin tương ứng!";
+        public const string SUC_UPDATE_ACHIEVEMENT = "Cập nhật thông tin thành tựu thành công!";
+        public const string FAILED_UDPATE_ACHIEVEMENT = "Cập nhật thông tin thành tựu mới thất bại rồi!";
+        public const string SUC_CREATE_ACHIEVEMENT = "Tạo thành tựu mới thành công!";
+        public const string FAILED_CREATE_ACHIEVEMENT = "Tạo thành tựu mới thất bại!";
+        public const string SUC_DELETE_ACHIEVEMENT = "Xóa thông tin thành tựu thành công!";
+        public const string FAILED_DELETE_ACHIEVEMENT = "Xóa thông tin thành tựu thất bại!";
+        public const string EXISTED_ACHIEVEMENT = "Tồn tại thành tựu!";
 
     }
 }
