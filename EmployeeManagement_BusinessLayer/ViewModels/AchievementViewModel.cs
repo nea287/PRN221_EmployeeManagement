@@ -13,5 +13,6 @@ namespace EmployeeManagement_BusinessLayer.ViewModels
         public DateTime? StartDate { get; set; }
         public DateTime? EndDate { get; set; }
         public string? EmployeeId { get; set; }
+        public int? Status { get; set; }
     }
 }

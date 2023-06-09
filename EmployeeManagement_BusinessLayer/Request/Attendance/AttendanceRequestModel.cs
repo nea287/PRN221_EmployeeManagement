@@ -1,12 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace EmployeeManagement_SWD392.Models
+namespace EmployeeManagement_BusinessLayer.Request.Attendance
 {
-    public partial class Attendance
+    public class AttendanceRequestModel
     {
-        public DateTime Date { get; set; }
-        public string EmployeeId { get; set; } = null!;
+        //public DateTime Date { get; set; }
+        //public string EmployeeId { get; set; } = null!;
         public TimeSpan? TimeIn { get; set; }
         public TimeSpan? TimeOut { get; set; }
         public double? TotalHours { get; set; }
@@ -15,7 +18,5 @@ namespace EmployeeManagement_SWD392.Models
         public int? LeaveType { get; set; }
         public string? Remarks { get; set; }
         public int? Status { get; set; }
-        public virtual Employee Employee { get; set; } = null!;
-        public virtual LeaveType? LeaveTypeNavigation { get; set; }
     }
 }

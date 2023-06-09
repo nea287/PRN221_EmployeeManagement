@@ -63,6 +63,16 @@ namespace EmployeeManagement_BusinessLayer.Common
         public const string SUC_DELETE_ACHIEVEMENT = "Xóa thông tin thành tựu thành công!";
         public const string FAILED_DELETE_ACHIEVEMENT = "Xóa thông tin thành tựu thất bại!";
         public const string EXISTED_ACHIEVEMENT = "Tồn tại thành tựu!";
+        //Attendance
+        public const string NOT_FOUND_ATTENDANCE = "Không tìm thấy thông tin chấm công tương ứng!";
+        public const string SUC_UPDATE_ATTENDANCE = "Cập nhật thông tin chấm công thành công!";
+        public const string FAILED_UDPATE_ATTENDANCE = "Cập nhật thông tin chấm công mới thất bại rồi!";
+        public const string SUC_CREATE_ATTENDANCE = "Tạo chấm công mới thành công!";
+        public const string FAILED_CREATE_ATTENDANCE = "Tạo thông tin chấm công mới thất bại!";
+        public const string SUC_DELETE_ATTENDANCE = "Xóa thông tin chấm công thành công!";
+        public const string FAILED_DELETE_ATTENDANCE = "Xóa thông tin chấm công thất bại!";
+        public const string EXISTED_ATTENDANCE = "Bạn đã chấm công rồi!";
 
     }
 }
+//srvrast
