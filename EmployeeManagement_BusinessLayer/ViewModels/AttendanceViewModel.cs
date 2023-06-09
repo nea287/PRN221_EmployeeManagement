@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace EmployeeManagement_SWD392.Models
+namespace EmployeeManagement_BusinessLayer.ViewModels
 {
-    public partial class Attendance
+    public class AttendanceViewModel
     {
         public DateTime Date { get; set; }
         public string EmployeeId { get; set; } = null!;
@@ -14,8 +17,5 @@ namespace EmployeeManagement_SWD392.Models
         public int? AttendanceStatus { get; set; }
         public int? LeaveType { get; set; }
         public string? Remarks { get; set; }
-        public int? Status { get; set; }
-        public virtual Employee Employee { get; set; } = null!;
-        public virtual LeaveType? LeaveTypeNavigation { get; set; }
     }
 }

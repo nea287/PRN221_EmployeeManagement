@@ -10,7 +10,7 @@ namespace EmployeeManagement_SWD392.Models
         public DateTime? UpdatedTime { get; set; }
         public string? RuleAwardId { get; set; }
         public string? RuleDisciplinaryId { get; set; }
-
+        public decimal? Salary { get; set; }
         public virtual Employee? Employee { get; set; }
         public virtual RuleAward? RuleAward { get; set; }
         public virtual RuleDisciplinary? RuleDisciplinary { get; set; }
