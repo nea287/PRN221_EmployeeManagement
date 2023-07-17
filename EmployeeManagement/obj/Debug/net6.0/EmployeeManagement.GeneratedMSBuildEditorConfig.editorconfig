@@ -1,0 +1,206 @@
+is_global = true
+build_property.XamlSourceGeneratorTracingFolder = 
+build_property.TargetFramework = net6.0
+build_property.TargetFramework = net6.0
+build_property.ProjectTypeGuidsProperty = 
+build_property.MSBuildProjectFullPath = C:\Users\Nea\source\repos\Test\PRN221_EmployeeManagement\EmployeeManagement\EmployeeManagement.csproj
+build_property.RootNamespace = EmployeeManagement
+build_property.RootNamespace = EmployeeManagement
+build_property.RootNamespace = EmployeeManagement
+build_property.DefineConstantsProperty = TRACE,DEBUG,NET,NET6_0,NETCOREAPP,HAS_UNO,UNO_HAS_FRAMEWORKELEMENT_MEASUREOVERRIDE,UNO_HAS_NO_IDEPENDENCYOBJECT,UNO_REFERENCE_API
+build_property.Configuration = Debug
+build_property.IntermediateOutputPath = obj\Debug\net6.0\
+build_property.AndroidApplication = 
+build_property.OutputType = Exe
+build_property.MSBuildProjectName = EmployeeManagement
+build_property.BuildingProject = false
+build_property.DesignTimeBuild = true
+build_property.UnoUISourceGeneratorDebuggerBreak = 
+build_property.BuildingInsideVisualStudio = true
+build_property.IsHotReloadHost = 
+build_property.UnoUseXamlReaderHotReload = true
+build_property.IsUnoHead = 
+build_property.IsUnoHead = 
+build_property.UseWPF = 
+build_property.UnoRemoteControlPort = 
+build_property.UnoRemoteControlHost = 
+build_property.UnoRemoteControlProcessorsPath = 
+build_property.UnoSkipUserControlsInVisualTree = 
+build_property.ShouldWriteErrorOnInvalidXaml = 
+build_property.IsUiAutomationMappingEnabled = 
+build_property.ShouldAnnotateGeneratedXaml = 
+build_property.DefaultLanguage = 
+build_property.UnoPlatformTelemetryOptOut = 
+build_property.UnoPlatformDefaultSymbolsFontFamily = ms-appx:///Uno.Fonts.Fluent/Fonts/uno-fluentui-assets.ttf
+build_property.ExcludeXamlNamespacesProperty = win,not_mux
+build_property.IncludeXamlNamespacesProperty = xamarin,not_win,legacy
+build_property.XamlGeneratorAnalyzerSuppressionsProperty = nventive.Usage-NV0056,nventive.Usage-NV0058,nventive.Usage-NV1003,nventive.Usage-NV0085,nventive.Usage-NV2001,nventive.Usage-NV2003,nventive.Usage-NV2004,nventive.Usage-NV2005,csharp-618 // Ignore obsolete members warnings,csharp-105 // Ignore duplicate namespaces,csharp-1591 // Ignore missing XML comment warnings,csharp-CS8669 // Ignore annotation for nullable reference types,dotnet-CA1001
+build_property.UnoEnableXamlFuzzyMatching = 
+build_property.UnoXamlResourcesTrimming = 
+build_property.BaseIntermediateOutputPath = C:\Users\Nea\source\repos\Test\PRN221_EmployeeManagement\EmployeeManagement\obj\
+build_property.AssemblyName = EmployeeManagement
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.ProjectDir = C:\Users\Nea\source\repos\Test\PRN221_EmployeeManagement\EmployeeManagement\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Nea\source\repos\Test\PRN221_EmployeeManagement\EmployeeManagement
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Nea/source/repos/Test/PRN221_EmployeeManagement/EmployeeManagement_BusinessLayer/EmployeeManagement_BusinessLayer.csproj]
+build_metadata.AdditionalFiles.SourceItemGroup = ProjectReference
+build_metadata.AdditionalFiles.Link = 
+build_metadata.AdditionalFiles.TargetPath = 
+build_metadata.AdditionalFiles.FullPath = C:\Users\Nea\source\repos\Test\PRN221_EmployeeManagement\EmployeeManagement_BusinessLayer\EmployeeManagement_BusinessLayer.csproj
+build_metadata.AdditionalFiles.Identity = C:\Users\Nea\source\repos\Test\PRN221_EmployeeManagement\EmployeeManagement_BusinessLayer\EmployeeManagement_BusinessLayer.csproj
+build_metadata.AdditionalFiles.XamlRuntime = 
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nea/source/repos/Test/PRN221_EmployeeManagement/EmployeeManagement_SWD392/EmployeeManagement_DataLayer.csproj]
+build_metadata.AdditionalFiles.SourceItemGroup = ProjectReference
+build_metadata.AdditionalFiles.Link = 
+build_metadata.AdditionalFiles.TargetPath = 
+build_metadata.AdditionalFiles.FullPath = C:\Users\Nea\source\repos\Test\PRN221_EmployeeManagement\EmployeeManagement_SWD392\EmployeeManagement_DataLayer.csproj
+build_metadata.AdditionalFiles.Identity = C:\Users\Nea\source\repos\Test\PRN221_EmployeeManagement\EmployeeManagement_SWD392\EmployeeManagement_DataLayer.csproj
+build_metadata.AdditionalFiles.XamlRuntime = 
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nea/source/repos/Test/PRN221_EmployeeManagement/EmployeeManagement/Pages/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.SourceItemGroup = 
+build_metadata.AdditionalFiles.Link = 
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.FullPath = C:\Users\Nea\source\repos\Test\PRN221_EmployeeManagement\EmployeeManagement\Pages\_ValidationScriptsPartial.cshtml
+build_metadata.AdditionalFiles.Identity = Pages\_ValidationScriptsPartial.cshtml
+build_metadata.AdditionalFiles.XamlRuntime = 
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nea/source/repos/Test/PRN221_EmployeeManagement/EmployeeManagement/Views/Account/Manager/Create.cshtml]
+build_metadata.AdditionalFiles.SourceItemGroup = 
+build_metadata.AdditionalFiles.Link = 
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxNYW5hZ2VyXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.FullPath = C:\Users\Nea\source\repos\Test\PRN221_EmployeeManagement\EmployeeManagement\Views\Account\Manager\Create.cshtml
+build_metadata.AdditionalFiles.Identity = Views\Account\Manager\Create.cshtml
+build_metadata.AdditionalFiles.XamlRuntime = 
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nea/source/repos/Test/PRN221_EmployeeManagement/EmployeeManagement/Views/Account/Manager/Delete.cshtml]
+build_metadata.AdditionalFiles.SourceItemGroup = 
+build_metadata.AdditionalFiles.Link = 
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxNYW5hZ2VyXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.FullPath = C:\Users\Nea\source\repos\Test\PRN221_EmployeeManagement\EmployeeManagement\Views\Account\Manager\Delete.cshtml
+build_metadata.AdditionalFiles.Identity = Views\Account\Manager\Delete.cshtml
+build_metadata.AdditionalFiles.XamlRuntime = 
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nea/source/repos/Test/PRN221_EmployeeManagement/EmployeeManagement/Views/Account/Manager/Details.cshtml]
+build_metadata.AdditionalFiles.SourceItemGroup = 
+build_metadata.AdditionalFiles.Link = 
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxNYW5hZ2VyXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.FullPath = C:\Users\Nea\source\repos\Test\PRN221_EmployeeManagement\EmployeeManagement\Views\Account\Manager\Details.cshtml
+build_metadata.AdditionalFiles.Identity = Views\Account\Manager\Details.cshtml
+build_metadata.AdditionalFiles.XamlRuntime = 
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nea/source/repos/Test/PRN221_EmployeeManagement/EmployeeManagement/Views/Account/Manager/Edit.cshtml]
+build_metadata.AdditionalFiles.SourceItemGroup = 
+build_metadata.AdditionalFiles.Link = 
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxNYW5hZ2VyXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.FullPath = C:\Users\Nea\source\repos\Test\PRN221_EmployeeManagement\EmployeeManagement\Views\Account\Manager\Edit.cshtml
+build_metadata.AdditionalFiles.Identity = Views\Account\Manager\Edit.cshtml
+build_metadata.AdditionalFiles.XamlRuntime = 
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nea/source/repos/Test/PRN221_EmployeeManagement/EmployeeManagement/Views/Account/Manager/Index.cshtml]
+build_metadata.AdditionalFiles.SourceItemGroup = 
+build_metadata.AdditionalFiles.Link = 
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxNYW5hZ2VyXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.FullPath = C:\Users\Nea\source\repos\Test\PRN221_EmployeeManagement\EmployeeManagement\Views\Account\Manager\Index.cshtml
+build_metadata.AdditionalFiles.Identity = Views\Account\Manager\Index.cshtml
+build_metadata.AdditionalFiles.XamlRuntime = 
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nea/source/repos/Test/PRN221_EmployeeManagement/EmployeeManagement/Views/Account/Manager/Manager.cshtml]
+build_metadata.AdditionalFiles.SourceItemGroup = 
+build_metadata.AdditionalFiles.Link = 
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxNYW5hZ2VyXE1hbmFnZXIuY3NodG1s
+build_metadata.AdditionalFiles.FullPath = C:\Users\Nea\source\repos\Test\PRN221_EmployeeManagement\EmployeeManagement\Views\Account\Manager\Manager.cshtml
+build_metadata.AdditionalFiles.Identity = Views\Account\Manager\Manager.cshtml
+build_metadata.AdditionalFiles.XamlRuntime = 
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nea/source/repos/Test/PRN221_EmployeeManagement/EmployeeManagement/Views/Employee/Privacy.cshtml]
+build_metadata.AdditionalFiles.SourceItemGroup = 
+build_metadata.AdditionalFiles.Link = 
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.FullPath = C:\Users\Nea\source\repos\Test\PRN221_EmployeeManagement\EmployeeManagement\Views\Employee\Privacy.cshtml
+build_metadata.AdditionalFiles.Identity = Views\Employee\Privacy.cshtml
+build_metadata.AdditionalFiles.XamlRuntime = 
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nea/source/repos/Test/PRN221_EmployeeManagement/EmployeeManagement/Views/Index.cshtml]
+build_metadata.AdditionalFiles.SourceItemGroup = 
+build_metadata.AdditionalFiles.Link = 
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.FullPath = C:\Users\Nea\source\repos\Test\PRN221_EmployeeManagement\EmployeeManagement\Views\Index.cshtml
+build_metadata.AdditionalFiles.Identity = Views\Index.cshtml
+build_metadata.AdditionalFiles.XamlRuntime = 
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nea/source/repos/Test/PRN221_EmployeeManagement/EmployeeManagement/Views/Login/Login.cshtml]
+build_metadata.AdditionalFiles.SourceItemGroup = 
+build_metadata.AdditionalFiles.Link = 
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.FullPath = C:\Users\Nea\source\repos\Test\PRN221_EmployeeManagement\EmployeeManagement\Views\Login\Login.cshtml
+build_metadata.AdditionalFiles.Identity = Views\Login\Login.cshtml
+build_metadata.AdditionalFiles.XamlRuntime = 
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nea/source/repos/Test/PRN221_EmployeeManagement/EmployeeManagement/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.SourceItemGroup = 
+build_metadata.AdditionalFiles.Link = 
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.FullPath = C:\Users\Nea\source\repos\Test\PRN221_EmployeeManagement\EmployeeManagement\Views\Shared\Error.cshtml
+build_metadata.AdditionalFiles.Identity = Views\Shared\Error.cshtml
+build_metadata.AdditionalFiles.XamlRuntime = 
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nea/source/repos/Test/PRN221_EmployeeManagement/EmployeeManagement/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.SourceItemGroup = 
+build_metadata.AdditionalFiles.Link = 
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.FullPath = C:\Users\Nea\source\repos\Test\PRN221_EmployeeManagement\EmployeeManagement\Views\Shared\_ValidationScriptsPartial.cshtml
+build_metadata.AdditionalFiles.Identity = Views\Shared\_ValidationScriptsPartial.cshtml
+build_metadata.AdditionalFiles.XamlRuntime = 
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nea/source/repos/Test/PRN221_EmployeeManagement/EmployeeManagement/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.SourceItemGroup = 
+build_metadata.AdditionalFiles.Link = 
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.FullPath = C:\Users\Nea\source\repos\Test\PRN221_EmployeeManagement\EmployeeManagement\Views\_ViewImports.cshtml
+build_metadata.AdditionalFiles.Identity = Views\_ViewImports.cshtml
+build_metadata.AdditionalFiles.XamlRuntime = 
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nea/source/repos/Test/PRN221_EmployeeManagement/EmployeeManagement/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.SourceItemGroup = 
+build_metadata.AdditionalFiles.Link = 
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.FullPath = C:\Users\Nea\source\repos\Test\PRN221_EmployeeManagement\EmployeeManagement\Views\_ViewStart.cshtml
+build_metadata.AdditionalFiles.Identity = Views\_ViewStart.cshtml
+build_metadata.AdditionalFiles.XamlRuntime = 
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nea/source/repos/Test/PRN221_EmployeeManagement/EmployeeManagement/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.SourceItemGroup = 
+build_metadata.AdditionalFiles.Link = 
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.FullPath = C:\Users\Nea\source\repos\Test\PRN221_EmployeeManagement\EmployeeManagement\Views\Shared\_Layout.cshtml
+build_metadata.AdditionalFiles.Identity = Views\Shared\_Layout.cshtml
+build_metadata.AdditionalFiles.XamlRuntime = 
+build_metadata.AdditionalFiles.CssScope = b-zfw5uihhvp

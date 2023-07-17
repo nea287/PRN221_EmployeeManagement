@@ -135,6 +135,18 @@ namespace EmployeeManagement_BusinessLayer.Services
             };
         }
 
+        public Task<AttendanceViewModel> TakeAttendance(AttendanceRequestModel model)
+        {
+            try
+            {
+                throw new Exception();
+            }
+            catch
+            {
+                throw new Exception(Constraints.FAILED_CREATE_ATTENDANCE);
+            }
+        }
+
         public ResponseResult<AttendanceViewModel> UpdateAttendance(AttendanceRequestModel attend, DateTime date, string empCode)
         {
             try

@@ -26,7 +26,7 @@ namespace EmployeeManagement_BusinessLayer.Services
             _mapper = mapper;
             _context = context;
         }
-        public ResponseResult<EmployeeViewModel> CreateEmployee(CreateEmployeeRequestModel emp)
+        public async Task<ResponseResult<EmployeeViewModel>> CreateEmployee(CreateEmployeeRequestModel emp)
         {
             Employee emp1 = null;
             try
@@ -34,15 +34,18 @@ namespace EmployeeManagement_BusinessLayer.Services
                 emp1 = _context.Employees
                     .FirstOrDefault(x => x.EmployeeId.Equals(emp.EmployeeId) && x.Status != 0);
 
-                if (emp != null)
+                if (emp1 != null)
                 {
                     _context.Entry(emp1).State = EntityState.Detached;
                     throw new Exception(Constraints.EXISTED_EMPLOYEE);
                 }
                 emp1 = _mapper.Map<Employee>(emp);
+                
                 _context.Entry(emp1).State = EntityState.Added;
 
-                _context.Employees.Add(emp1);
+                await _context.Employees.AddAsync(emp1);
+                await _context.SaveChangesAsync();
+                _context.Entry(emp1).State = EntityState.Detached;
 
             }
             catch (Exception ex)
@@ -60,7 +63,7 @@ namespace EmployeeManagement_BusinessLayer.Services
             };
         }
 
-        public bool DeleteAccount(string empCode)
+        public async Task<bool> DeleteAccount(string empCode)
         {
             try
             {
@@ -78,7 +81,7 @@ namespace EmployeeManagement_BusinessLayer.Services
                 _context.Entry(emp).State = EntityState.Modified;
 
                 _context.Employees.Update(emp);
-                _context.SaveChanges();
+                await _context.SaveChangesAsync();
 
             }
             catch (Exception ex)
@@ -137,7 +140,7 @@ namespace EmployeeManagement_BusinessLayer.Services
             };
         }
 
-        public ResponseResult<EmployeeViewModel> UpdateEmployee(UpdateEmployeeRequestModel emp)
+        public async Task<ResponseResult<EmployeeViewModel>> UpdateEmployee(UpdateEmployeeRequestModel emp)
         {
             try
             {
@@ -148,14 +151,25 @@ namespace EmployeeManagement_BusinessLayer.Services
                 {
                     throw new Exception(Constraints.NOT_FOUND_EMPLOYEE);
                 }
-
+                if (emp.Birthdate == null)
+                {
+                    emp.Birthdate = findEmployee.Birthdate;
+                }
+                if (emp.DateOfHide == null)
+                {
+                    emp.DateOfHide = findEmployee.DateOfHide;
+                }
+                if(emp.DepartmentId == "")
+                {
+                    emp.DepartmentId = findEmployee.DepartmentId;
+                }
                 Employee emp1 = _mapper.Map<Employee>(emp);
 
                 _context.Entry(findEmployee).State = EntityState.Detached;
                 _context.Entry(emp1).State = EntityState.Modified;
                 _context.Employees.Update(emp1);
-                _context.SaveChanges();
-
+                await _context.SaveChangesAsync();
+                _context.Entry(emp1).State = EntityState.Detached;
             }
             catch (Exception ex)
             {

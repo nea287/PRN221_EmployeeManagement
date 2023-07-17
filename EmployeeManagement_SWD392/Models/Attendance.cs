@@ -14,6 +14,7 @@ namespace EmployeeManagement_SWD392.Models
         public int? AttendanceStatus { get; set; }
         public int? LeaveType { get; set; }
         public string? Remarks { get; set; }
+        public string? Address { get; set; }
         public int? Status { get; set; }
         public virtual Employee Employee { get; set; } = null!;
         public virtual LeaveType? LeaveTypeNavigation { get; set; }

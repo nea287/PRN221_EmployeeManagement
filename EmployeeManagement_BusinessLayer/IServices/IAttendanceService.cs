@@ -16,5 +16,6 @@ namespace EmployeeManagement_BusinessLayer.IServices
         ResponseResult<AttendanceViewModel> CreateAttendance(AttendanceRequestModel attend, string empCode, DateTime date);
         ResponseResult<AttendanceViewModel> UpdateAttendance(AttendanceRequestModel attend, DateTime date, string empCode);
         bool DeleteAttendance(string empdCode, DateTime date);
+        Task<AttendanceViewModel> TakeAttendance(AttendanceRequestModel model);
     }
 }

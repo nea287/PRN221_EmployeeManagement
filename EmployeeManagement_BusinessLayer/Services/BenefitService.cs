@@ -26,7 +26,7 @@ namespace EmployeeManagement_BusinessLayer.Services
             _mapper = mapper;
             _context = context;
         }
-        public ResponseResult<BenefitViewModel> CreateBenefit(BenefitRequestModel bebef)
+        public async Task<ResponseResult<BenefitViewModel>> CreateBenefit(BenefitRequestModel bebef)
         {
             Benefit benefit = null;
             try
@@ -43,7 +43,8 @@ namespace EmployeeManagement_BusinessLayer.Services
                 benefit = _mapper.Map<Benefit>(bebef);
                 _context.Entry(benefit).State = EntityState.Added;
 
-                _context.Benefits.Add(benefit);
+                await _context.Benefits.AddAsync(benefit);
+                await _context.SaveChangesAsync();  
 
             }
             catch (Exception ex)
@@ -61,7 +62,7 @@ namespace EmployeeManagement_BusinessLayer.Services
             };
         }
 
-        public bool DeleteBenefit(int benefID)
+        public async Task<bool> DeleteBenefit(int benefID)
         {
             try
             {
@@ -137,35 +138,44 @@ namespace EmployeeManagement_BusinessLayer.Services
             };
         }
 
-        public ResponseResult<BenefitViewModel> UpdateBenefit(BenefitRequestModel benef, int benefId)
+
+        public async Task<ResponseResult<BenefitViewModel>> UpdateBenefit(UpdateBenefitRequestModel model)
         {
             try
             {
-                var findBenefit = _context.Benefits
-                    .FirstOrDefault(x => x.BenefitId == benefId && x.Status != 0);
+                var model1 = _context.Benefits
+                    .FirstOrDefault(x => x.BenefitId == model.BenefitId  && x.Status != 0);
 
-                if (findBenefit == null)
+                if (model1 == null)
                 {
                     throw new Exception(Constraints.NOT_FOUND_BENEFIT);
                 }
-
-                Benefit benefit = _mapper.Map<Benefit>(benef);
-
-                _context.Entry(findBenefit).State = EntityState.Detached;
+                
+                Benefit benefit = _mapper.Map<Benefit>(model);
+                if (benefit.ReceivedDate == null)
+                {
+                    benefit.ReceivedDate = model1.ReceivedDate;
+                }
+                benefit.Status = 1;
+                _context.Entry(model1).State = EntityState.Detached;
                 _context.Entry(benefit).State = EntityState.Modified;
                 _context.Benefits.Update(benefit);
-                _context.SaveChanges();
+
+                await _context.SaveChangesAsync();
+                _context.Entry(benefit).State = EntityState.Detached;
+
+
 
             }
             catch (Exception ex)
             {
-                throw new Exception(Constraints.FAILED_UDPATE_BENEFIT) ;
+                throw new Exception(Constraints.FAILED_UPDATE);
             }
 
             return new ResponseResult<BenefitViewModel>()
             {
-                Message = Constraints.SUC_UPDATE_BENEFIT,
-                Value = _mapper.Map<BenefitViewModel>(benef)
+                Message = Constraints.SUC_UPDATE,
+                Value = _mapper.Map<BenefitViewModel>(model)
             };
         }
     }

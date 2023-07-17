@@ -1,0 +1,15 @@
+C:\Users\Nea\source\repos\Test\PRN221_EmployeeManagement\EmployeeManagement_BusinessLayer\bin\Debug\net6.0\EmployeeManagement_BusinessLayer.deps.json
+C:\Users\Nea\source\repos\Test\PRN221_EmployeeManagement\EmployeeManagement_BusinessLayer\bin\Debug\net6.0\EmployeeManagement_BusinessLayer.dll
+C:\Users\Nea\source\repos\Test\PRN221_EmployeeManagement\EmployeeManagement_BusinessLayer\bin\Debug\net6.0\EmployeeManagement_BusinessLayer.pdb
+C:\Users\Nea\source\repos\Test\PRN221_EmployeeManagement\EmployeeManagement_BusinessLayer\bin\Debug\net6.0\EmployeeManagement_DataLayer.dll
+C:\Users\Nea\source\repos\Test\PRN221_EmployeeManagement\EmployeeManagement_BusinessLayer\bin\Debug\net6.0\EmployeeManagement_DataLayer.pdb
+C:\Users\Nea\source\repos\Test\PRN221_EmployeeManagement\EmployeeManagement_BusinessLayer\obj\Debug\net6.0\EmployeeManagement_BusinessLayer.csproj.AssemblyReference.cache
+C:\Users\Nea\source\repos\Test\PRN221_EmployeeManagement\EmployeeManagement_BusinessLayer\obj\Debug\net6.0\EmployeeManagement_BusinessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Nea\source\repos\Test\PRN221_EmployeeManagement\EmployeeManagement_BusinessLayer\obj\Debug\net6.0\EmployeeManagement_BusinessLayer.AssemblyInfoInputs.cache
+C:\Users\Nea\source\repos\Test\PRN221_EmployeeManagement\EmployeeManagement_BusinessLayer\obj\Debug\net6.0\EmployeeManagement_BusinessLayer.AssemblyInfo.cs
+C:\Users\Nea\source\repos\Test\PRN221_EmployeeManagement\EmployeeManagement_BusinessLayer\obj\Debug\net6.0\EmployeeManagement_BusinessLayer.csproj.CoreCompileInputs.cache
+C:\Users\Nea\source\repos\Test\PRN221_EmployeeManagement\EmployeeManagement_BusinessLayer\obj\Debug\net6.0\EmployeeManagement_BusinessLayer.csproj.CopyComplete
+C:\Users\Nea\source\repos\Test\PRN221_EmployeeManagement\EmployeeManagement_BusinessLayer\obj\Debug\net6.0\EmployeeManagement_BusinessLayer.dll
+C:\Users\Nea\source\repos\Test\PRN221_EmployeeManagement\EmployeeManagement_BusinessLayer\obj\Debug\net6.0\refint\EmployeeManagement_BusinessLayer.dll
+C:\Users\Nea\source\repos\Test\PRN221_EmployeeManagement\EmployeeManagement_BusinessLayer\obj\Debug\net6.0\EmployeeManagement_BusinessLayer.pdb
+C:\Users\Nea\source\repos\Test\PRN221_EmployeeManagement\EmployeeManagement_BusinessLayer\obj\Debug\net6.0\ref\EmployeeManagement_BusinessLayer.dll

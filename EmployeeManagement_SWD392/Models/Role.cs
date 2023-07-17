@@ -10,7 +10,7 @@ namespace EmployeeManagement_SWD392.Models
             Accounts = new HashSet<Account>();
         }
 
-        public string RoleCode { get; set; } = null!;
+        public int RoleCode { get; set; }
         public string? RoleName { get; set; }
         public int? Status { get; set; }
 

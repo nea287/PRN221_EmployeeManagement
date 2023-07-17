@@ -1,0 +1,852 @@
+﻿@using EmployeeManagement_BusinessLayer.ViewModels
+
+@*
+
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = null;
+
+}
+@functions {
+    public IActionResult GetBenefits()
+    {
+        return new RedirectToActionResult("Index", "Benefit", new { });
+    }
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Arsha Bootstrap Template - Index</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="~/img/favicon.png" rel="icon">
+    <link href="~/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="~/vendor/aos/aos.css" rel="stylesheet">
+    <link href="~/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="~/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="~/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="~/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="~/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+
+    <!-- Template Main CSS File -->
+    <link href="~/css/style.css" rel="stylesheet">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <style>
+        .wrapper {
+            max-width: 960px;
+            margin: 10% auto;
+            text-align: center;
+            line-height: 2em;
+        }
+
+        .popup {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: rgba(0,0,0,0.6);
+            display: none;
+        }
+
+        #xmas-popup .popup-content {
+            width: 600px;
+            height: fit-content;
+            display: flex;
+            flex-wrap: wrap;
+            background: #bbb;
+            margin: 100px auto;
+            position: relative;
+            border: 5px solid #fff;
+        }
+
+        #xmas-popup1 .popup-content1 {
+            width: 600px;
+            height: fit-content;
+            display: flex;
+            flex-wrap: wrap;
+            background: #bbb;
+            margin: 100px auto;
+            position: relative;
+            border: 5px solid #fff;
+        }
+
+        #xmas-popup-benefit .popup-content-benefit {
+            width: fit-content;
+            height: fit-content;
+            display: flex;
+            flex-wrap: wrap;
+            background: #bbb;
+            margin: 100px auto;
+            position: relative;
+            border: 5px solid #fff;
+        }
+
+        #xmas-popup-create-benefit .popup-content-create-benefit {
+            width: fit-content;
+            height: fit-content;
+            display: flex;
+            flex-wrap: wrap;
+            background: #bbb;
+            margin: 100px auto;
+            position: relative;
+            border: 5px solid #fff;
+        }
+
+        #xmas-popup-camera .popup-content-camera {
+            width: fit-content;
+            height: fit-content;
+            display: flex;
+            flex-wrap: wrap;
+            background: #bbb;
+            margin: 100px auto;
+            position: relative;
+            border: 5px solid #fff;
+        }
+        /* #xmas-popup .popup-content > div{
+                                    flex:1;
+                                }*/
+        .close {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            border-radius: 50%;
+            background: #222;
+            border: 3px solid #fff;
+            color: #fff;
+            text-decoration: none;
+            line-height: 0;
+            padding: 9px 0 11px;
+            width: 20px;
+            text-align: center;
+        }
+
+        .popup:target {
+            display: block;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top">
+        <div class="container d-flex align-items-center">
+
+
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+                    <li><a class="button" href="#xmas-popup-camera">Attendance</a></li>
+                    <li class="dropdown">
+                        <a href="#"><span>Manage Employee</span> <i class="bi bi-chevron-down"></i></a>
+                        <ul>
+                            <li><a onclick="document.getElementById('insert').style.display='block'">View List Employee</a></li>
+
+                        </ul>
+                    </li>
+                    <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+                    <li><a class="getstarted scrollto" href="#about">Get Started</a></li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav>
+            <!-- .navbar -->
+            <!--End phần cần làm-->
+
+        </div>
+    </header>
+    <!-- End Header -->
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="d-flex align-items-center">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
+
+                    <div class="d-flex justify-content-center justify-content-lg-start">
+                    </div>
+                </div>
+                <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="assets/img/hero-img.png" class="img-fluid animated" alt="">
+                </div>
+            </div>
+        </div>
+
+    </section><!-- End Hero -->
+
+    <main id="main">
+        @{
+            IList<AccountViewModel> model = ViewBag.lstAccount;
+            IList<EmployeeViewModel> lstEmployee = ViewBag.lstEmployee;
+            int accId = 0;
+            //int checkBenefit = 0;
+            string empId = "";
+            if (model == null)
+            {
+                model = new List<AccountViewModel>();
+            }
+        }
+        <!--List Employee-->
+        <section id="clients" class="clients section-bg" style="height:3000px;">
+            <!--list Account-->
+            @*            <table id="insert1" class="table table-success table-hover" style="display:none">
+
+            <thead>
+
+
+            <tr>
+            <th>AccountID</th>
+            <th>Username</th>
+            <th>EmployeeID</th>
+            <th>Role Code</th>
+            <th>Salary</th>
+            <th>Manage resourse</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach (var account in model)
+            {
+            <tr>
+            <td>@account.AccountId</td>
+            <td>@account.Username</td>
+            <td>@account.EmployeeId</td>
+            <td>@account.RoleCode</td>
+            <td>@account?.Salary</td>
+            <th>
+            <nav id="navbar" class="navbar">
+            <ul>
+            <li class="dropdown">
+            <a href="#"><span>Manage Resourse</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+
+            <li class="dropdown">
+            <a href="#"><span>Employee</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+            <li><a class="button" href="#xmas-popup" @{accId=account.AccountId;}>Edit</a></li>
+            <li><a asp-controller="Home" asp-action="Delete" asp-route-id="@account.AccountId">Delete</a></li>
+            </ul>
+
+            </li>
+
+            <li><a href="#">Benefit</a></li>
+            <li><a href="#">Performance</a></li>
+            <li><a href="#">Achievement</a></li>
+
+            </ul>
+            </li>
+            </ul>
+            </nav>
+            </th>
+            </tr>
+            }
+            </tbody>
+            </table>
+            *@            <!--end list Account-->
+            <!--List Employee-->
+            @if (lstEmployee != null)
+            {
+
+                <a class="button" href="#xmas-popup1">Create New</a>
+                <table id="insert" class="table table-success table-hover" style="display:none">
+
+                    <thead>
+
+
+                        <tr>
+                            <th>Employee ID</th>
+                            <th>Employee Name</th>
+                            <th>Employee Age</th>
+                            <th>Mail</th>
+                            <th>Employee Address</th>
+                            <th>Phone</th>
+                            <th>Date Of Hide</th>
+                            <th>Birthdate</th>
+                            <th>Coach</th>
+                            <th>Department ID</th>
+                            <th>Country</th>
+                            <th>Status</th>
+                            <th>Bank Account</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var emp in lstEmployee)
+                        {
+                            <tr>
+                                <td>@emp.EmployeeId</td>
+                                <td>@emp.EmployeeName</td>
+                                <td>@emp.Mail</td>
+                                <td>@emp.EmployeeAddress</td>
+                                <td>@emp.Phone</td>
+                                <td>@emp.DateOfHide</td>
+                                <td>@emp.Birthdate</td>
+                                <td>@emp.Coach</td>
+                                <td>@emp.DepartmentId</td>
+                                <td>@emp.Country</td>
+                                <td>@emp.Status</td>
+                                <td>@emp.BankAccount</td>
+                                <th>
+                                    <nav id="navbar" class="navbar">
+                                        <ul>
+                                            <li class="dropdown">
+                                                <a href="#"><span>Manage Resourse</span> <i class="bi bi-chevron-down"></i></a>
+                                                <ul>
+
+                                                    <li class="dropdown">
+                                                        <a href="#"><span>Employee</span> <i class="bi bi-chevron-down"></i></a>
+                                                        <ul>
+                                                            <li>
+                                                                <a class="button" href="#xmas-popup" @{
+                                                           empId = emp.EmployeeId;
+                                                           }>Edit</a>
+                                                            </li>
+                                                            <li><a asp-controller="Employee" asp-action="Delete" asp-route-id="@emp.EmployeeId">Delete</a></li>
+                                                        </ul>
+
+                                                    </li>
+
+                                                    <li>
+                                                        <a href="#xmas-popup-benefit" @{
+                                                   empId = emp.EmployeeId;
+                                                   }>Benefit</a>
+                                                    </li>
+                                                    <li><a href="#">Performance</a></li>
+                                                    <li><a href="#">Achievement</a></li>
+
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </th>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            }
+            <!--End list Employee-->
+        </section>
+
+
+
+        <!--Start popup Attendance-->
+
+        <div id="xmas-popup-camera" class="popup" href="#">
+
+            <div class="popup-content">
+                <a href="#" class="close">x</a>
+
+                <button id="startButton" ">Start camera</button>
+                <button id="takePhotoButton">Take photo</button>
+                <button id="capture">Capture</button>
+
+                <button id="stop">Stop Camera</button>
+                <img id="capturedImage" src="" alt="Hình ảnh đã chụp">
+                <!--Start Camera-->
+                <video id="video" width="640" height="480" autoplay></video>
+
+
+                <script>
+                    var video = document.querySelector("#video");
+                    var startButton = document.querySelector("#startButton");
+                    var takePhotoButton = document.querySelector("#takePhotoButton");
+                    var captureButton = document.querySelector('#capture');
+                    var stopButton = document.querySelector('#stop');
+
+                    startButton.onclick = function () {
+                        // Yêu cầu truy cập camera
+                        navigator.mediaDevices.getUserMedia({ video: true })
+                            .then(function (stream) {
+                                // Hiển thị hình ảnh từ camera trên video
+                                video.srcObject = stream;
+                                video.play();
+                            })
+
+                            .catch(function (error) {
+                                console.error("Error accessing media devices.", error);
+                            });
+                    };
+
+                    captureButton.addEventListener('click', function () {
+                        var stream = video.srcObject;
+
+                        if (stream) {
+
+                            var canvas = document.createElement('canvas');
+
+                            //let picture = video.snap();
+
+                            //document.querySelector("#download-photo").href = picture;
+                            canvas.width = video.videoWidth;
+                            canvas.height = video.videoHeight;
+                            canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
+
+                            var imageData = canvas.toDataURL('/image/png');
+                            const capturedImage = document.getElementById('capturedImage');
+                            if (stream) {
+                                stream.getTracks().forEach(function (track) {
+                                    track.stop();
+                                });
+                                video.srcObject = null;
+                                stream = null;
+                            }
+                            capturedImage.src = imageData;
+
+
+                            const link = document.createElement('a');
+                            link.href = imageData;
+                            link.download = '2.png';
+                            link.click();
+                            capturedImage.src = "";
+
+
+                            fetch('/Attendance/Create', {
+                                method: 'POST',
+                                headers: {
+                                    'Content-Type': 'application/json'
+                                },
+                                body: JSON.stringify({ image: imageData })
+                            })
+                                .then(function (response) {
+                                    console.log('Ảnh đã được gửi đến controller.');
+                                })
+                                .catch(function (error) {
+                                    console.error('Lỗi khi gửi yêu cầu: ', error);
+                                });
+
+                            // Loại bỏ phần tiền tố của data URL
+                            //const base64Data = imageData.replace(/^data:image\/png;base64,/, '');
+
+                            //const fs = require('fs');
+                            //fs.writeFile('/image/2.png', base64Data, 'base64', function (err) {
+                            //    if (err) {
+                            //        console.error('Lỗi khi lưu trữ hình ảnh: ', err);
+                            //    } else {
+                            //        console.log('Hình ảnh đã được lưu trữ.');
+                            //    }
+                            //});
+                                
+
+                            // Xử lý dữ liệu hình ảnh ở đây
+                        }
+
+                    });
+                    stopButton.addEventListener('click', function () {
+                        var stream = video.srcObject;
+                        var tracks = stream.getTracks();
+                        if (stream) {
+                            stream.getTracks().forEach(function (track) {
+                                track.stop();
+                            });
+                            video.srcObject = null;
+                            stream = null;
+                        }
+                    });
+                    takePhotoButton.onclick = function () {
+                        // Chụp ảnh từ video
+                        var canvas = document.createElement("canvas");
+                        canvas.width = video.videoWidth;
+                        canvas.height = video.videoHeight;
+                        var context = canvas.getContext("2d");
+                        context.drawImage(video, 0, 0, canvas.width, canvas.height);
+                        var dataURL = canvas.toDataURL("./image/png");
+
+                        // Gửi ảnh đến server
+                        $.ajax({
+                            url: "/MyPage/CapturePhoto",
+                            type: "POST",
+                            data: JSON.stringify({ imageData: dataURL }),
+                            contentType: "application/json; charset=utf-8",
+                            dataType: "json",
+                            success: function (result) {
+                                console.log("Photo captured successfully.");
+                            },
+                            error: function (xhr, status, error) {
+                                console.error("Error capturing photo.", error);
+                            }
+                        });
+                    };
+                </script>
+
+
+                <!--End Camera-->
+            </div>
+        </div>
+
+        <!--End popup Attendance-->
+        <!-- popup upddate code -->
+        @{
+            AccountViewModel acc = model.FirstOrDefault(x => x.AccountId == accId);
+            EmployeeViewModel employee = new EmployeeViewModel();
+            if (lstEmployee != null)
+            {
+                employee = lstEmployee.FirstOrDefault(e => e.EmployeeId.Equals(empId));
+            }
+
+        }
+        <div id="xmas-popup" class="popup" href="#">
+
+            <div class="popup-content">
+                <a href="#" class="close">x</a>
+                @if (acc != null)
+                {
+
+
+                    @*                <form asp-action="Edit" asp-controller="Home">
+                <div class="form-group">
+                <label class="control-label">AccountID</label>
+                <input name="txt_accountId" value="@acc.AccountId" type="text" readonly class="form-control"/>
+                </div>
+                <div class="form-group">
+                <label class="control-label">User name</label>
+                <input name="txt_username" value="@acc.Username" type="text" readonly class="form-control"/>
+                </div>
+                <div class="form-group">
+                <label class="control-label">Employee ID</label>
+                <input name="txt_empId" value="@acc.EmployeeId" type="text" class="form-control"/>
+                </div>
+                <div class="form-group">
+                <label class="control-label">Role Code</label>
+                <input name="txt_roleCode" value="@acc.RoleCode" type="text" class="form-control"/>
+                </div>
+                <div class="form-group">
+                <label class="control-label">Salary</label>
+                <input name="txt_salary" value="@acc.Salary" type="text" required class="form-control"/>
+                </div>
+                <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+                </div>
+                </form>*@
+                }
+                @if (employee != null)
+                {
+                    <form asp-action="Edit" asp-controller="Employee">
+                        <div class="form-group">
+                            <label class="control-label">Employee ID</label>
+                            <input name="txt_empId" value="@employee.EmployeeId" type="text" readonly class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Employee Name</label>
+                            <input name="txt_empName" value="@employee.EmployeeName" type="text" required class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Employee Age</label>
+                            <input name="txt_empAge" value="@employee.EmployeeAge" type="text" required class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Mail</label>
+                            <input name="txt_mail" value="@employee.Mail" type="email" required class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Employee Address</label>
+                            <input name="txt_empAddress" value="@employee.EmployeeAddress" type="text" required class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Phone</label>
+                            <input name="txt_phone" value="@employee.Phone" type="tel" required class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Date Of Hide</label>
+                            <input name="txt_dateOfHide" value="@employee.DateOfHide" type="date" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Birthdate</label>
+                            <input name="txt_birthdate" value="@employee.Birthdate" type="date" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Coach</label>
+                            <input name="txt_coach" value="@employee.Coach" type="text" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Department ID</label>
+                            <input name="txt_departmentId" value="@employee.DepartmentId" type="text" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Country</label>
+                            <input name="txt_country" value="@employee.Country" type="text" required class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Bank Account</label>
+                            <input name="txt_bankAccount" value="@employee.BankAccount" type="text" required class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Save" class="btn btn-primary" />
+                        </div>
+                    </form>
+                }
+            </div>
+        </div>
+
+        <!--End Popup-->
+        <!--Create new benefit popup-->
+        <div id="xmas-popup-create-benefit" class="popup" href="#">
+
+            <div class="popup-content-create-benefit">
+                <a href="#" class="close">x</a>
+                <!--Start create new benefit-->
+                <form asp-action="Create" asp-controller="Benefit" method="post">
+                    <div class="form-group">
+                        <label class="control-label">Employee ID</label>
+                        <input name="txt_empId" value="" type="text" required class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Received Date</label>
+                        <input name="txt_receivedDate" type="date" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Remarks</label>
+                        <input name="txt_remarks" value="" type="text" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">BenefitType ID</label>
+                        <input name="txt_benefitTypeId" value="" type="text" required class="form-control" />
+                    </div>
+
+                    <div class="form-group">
+                        <input type="submit" value="Create" class="btn btn-primary" />
+                    </div>
+                </form>
+                <!--End create new benefit-->
+            </div>
+        </div>
+        <!--End new benefit popup-->
+        <!--Start popup Crraeta-->
+        <div id="xmas-popup1" class="popup" href="#">
+
+            <div class="popup-content1">
+                <a href="#" class="close">x</a>
+
+                <form asp-action="Create" asp-controller="Employee" method="post">
+                    <div class="form-group">
+                        <label class="control-label">Employee ID</label>
+                        <input name="txt_empId" value="" type="text" required class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Employee Name</label>
+                        <input name="txt_empName" value="" type="text" required class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Mail</label>
+                        <input name="txt_mail" value="" type="email" required class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Employee Address</label>
+                        <input name="txt_empAddress" value="" type="text" required class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Phone</label>
+                        <input name="txt_phone" value="" type="tel" required class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Date Of Hide</label>
+                        <input name="txt_dateOfHide" value="" type="date" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Birthdate</label>
+                        <input name="txt_birthdate" value="" type="date" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Coach</label>
+                        <input name="txt_coach" value="@employee.Coach" type="text" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Department ID</label>
+                        <input name="txt_departmentId" value="" type="text" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Country</label>
+                        <input name="txt_country" value="" type="text" required class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Bank Account</label>
+                        <input name="txt_bankAccount" value="" type="text" required class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Create" class="btn btn-primary" />
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!--End Crate New-->
+        <!--Start popup Benefit-->
+        @*        @if(checkBenefit == 1){
+        checkBenefit = 0;
+        GetBenefits();
+        }*@
+        @{
+            IList<BenefitViewModel> lstBenefit = new List<BenefitViewModel>();
+            lstBenefit = ViewBag.bef;
+            lstBenefit = lstBenefit.Where(x => x.EmployeeId.Equals(empId)).ToList();
+        }
+        @if (lstBenefit != null)
+        {
+            <div id="xmas-popup-benefit" class="popup" href="#">
+
+                <div class="popup-content-benefit">
+                    <a href="#" class="close">x</a>
+                    <!--Start create new benefit-->
+                    <a href="#xmas-popup-create-benefit">Create new Benefit</a>
+                    <!--End create new benefit-->
+                    @if (lstBenefit.Count > 0)
+                    {
+                        <!--table-->
+                        <table class="table table-success table-hover">
+
+                            <thead>
+
+
+                                <tr>
+                                    <th>Benefit Id</th>
+                                    <th>Employee Id</th>
+                                    <th>Received Date</th>
+                                    <th>Remarks</th>
+                                    <th>BenefitType Id</th>
+                                    <th>Edit</th>
+                                    <th>Delete</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var emp in lstBenefit)
+                                {
+                                    <form asp-controller="Benefit" asp-action="ManageResourse" method="post">
+
+
+                                    <tr>
+                                        <td><input name="txt_benefitId" value="@emp.BenefitId" type="text" readonly /></td>
+                                        <td><input name="txt_empId" value="@emp.EmployeeId" type="text" required /></td>
+                                        <td><input name="txt_receivedDate" type="date" />@emp.ReceivedDate</td>
+                                        <td><input name="txt_remarks" value="@emp.Remarks" type="text" /></td>
+                                        <td><input name="txt_benefitTypeId" value="@emp.BenefitTypeId" type="text" required /></td>
+                                        <td><input name="action" value="Edit" type="submit" /></td>
+                                        <td><input name="action" value="Delete" type="submit" /></td>
+                                    </tr>
+                                    </form>
+                                }
+                            </tbody>
+                        </table>
+                    }
+                </div>
+            </div>
+
+        }
+        <!--End Benfit-->
+
+    </main>
+    <!-- End #main -->
+    <!-- ======= Footer ======= -->
+    @*<footer id="footer">
+
+    <div class="footer-newsletter">
+    <div class="container">
+    <div class="row justify-content-center">
+    <div class="col-lg-6">
+    <h4>Join Our Newsletter</h4>
+    <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+    <form action="" method="post">
+    <input type="email" name="email"><input type="submit" value="Subscribe">
+    </form>
+    </div>
+    </div>
+    </div>
+    </div>
+
+    <div class="footer-top">
+    <div class="container">
+    <div class="row">
+
+    <div class="col-lg-3 col-md-6 footer-contact">
+    <h3>Arsha</h3>
+    <p>
+    A108 Adam Street <br>
+    New York, NY 535022<br>
+    United States <br><br>
+    <strong>Phone:</strong> +1 5589 55488 55<br>
+    <strong>Email:</strong> info@example.com<br>
+    </p>
+    </div>
+
+    <div class="col-lg-3 col-md-6 footer-links">
+    <h4>Useful Links</h4>
+    <ul>
+    <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+    <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+    <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+    <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+    <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+    </ul>
+    </div>
+
+    <div class="col-lg-3 col-md-6 footer-links">
+    <h4>Our Services</h4>
+    <ul>
+    <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
+    <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+    <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
+    <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
+    <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+    </ul>
+    </div>
+
+    <div class="col-lg-3 col-md-6 footer-links">
+    <h4>Our Social Networks</h4>
+    <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
+    <div class="social-links mt-3">
+    <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+    <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+    <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+    <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+    <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+    </div>
+    </div>
+
+    </div>
+    </div>
+    </div>
+
+    <div class="container footer-bottom clearfix">
+    <div class="copyright">
+    &copy; Copyright <strong><span>Arsha</span></strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+    <!-- All the links in the footer should remain intact. -->
+    <!-- You can delete the links only if you purchased the pro version. -->
+    <!-- Licensing information: https://bootstrapmade.com/license/ -->
+    <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/ -->
+    Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+    </div>
+    </div>
+    </footer>*@
+    <!-- End Footer -->
+
+    <div id="preloader"></div>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="~/vendor/aos/aos.js"></script>
+    <script src="~/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="~/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="~/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="~/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="~/js/main.js"></script>
+
+
+</body>
+
+</html>

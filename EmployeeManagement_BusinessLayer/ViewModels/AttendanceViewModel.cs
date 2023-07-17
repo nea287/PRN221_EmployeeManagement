@@ -16,6 +16,7 @@ namespace EmployeeManagement_BusinessLayer.ViewModels
         public double? OvertimeHours { get; set; }
         public int? AttendanceStatus { get; set; }
         public int? LeaveType { get; set; }
+        public string? Address { get; set; }
         public string? Remarks { get; set; }
     }
 }

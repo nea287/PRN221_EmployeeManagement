@@ -12,11 +12,13 @@ namespace EmployeeManagement_BusinessLayer.IServices
     {
         ResponseResult<AccountViewModel> GetAccountByID(int accID);
         DynamicModelResponse.DynamicModelsResponse<AccountViewModel> GetAccounts(int page, int size);
-        ResponseResult<AccountViewModel> Login(string username, string password);   
-        ResponseResult<AccountViewModel> Logout();
-        ResponseResult<AccountViewModel> CreateAccount(CreateAccountRequestModel acc);
-        ResponseResult<AccountViewModel> UpdateAccount(UpdateAccountRequestModel acc);
-        bool DeleteAccount(int accID);
+        Task<ResponseResult<AccountViewModel>> Login(string username, string password);   
+        Task<ResponseResult<AccountViewModel>> Logout(); 
+        Task<ResponseResult<AccountViewModel>> CreateAccount(CreateAccountRequestModel acc);
+        Task<ResponseResult<AccountViewModel>> UpdateAccount(UpdateAccountRequestModel acc);
+        Task<ResponseResult<AccountViewModel>> UpdateAccountByManager(UpdateAccountByManagerRequestModel acc);
+
+        Task<bool> DeleteAccount(int accID);
         
     }
 }

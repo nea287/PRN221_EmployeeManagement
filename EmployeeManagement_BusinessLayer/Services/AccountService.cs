@@ -28,13 +28,13 @@ namespace EmployeeManagement_BusinessLayer.Services
             _context = context;
         }
         //Creata a account
-        public ResponseResult<AccountViewModel> CreateAccount(CreateAccountRequestModel acc)
+        public async Task<ResponseResult<AccountViewModel>> CreateAccount(CreateAccountRequestModel acc)
         {
             Account account = null;
             try
             {
-                account = _context.Accounts
-                    .FirstOrDefault(x => x.Username.Equals(acc.Username) && x.Status != 0);
+                account = await _context.Accounts
+                    .FirstOrDefaultAsync(x => x.Username.Equals(acc.Username) && x.Status != 0);
 
                 if(account != null)
                 {
@@ -44,7 +44,8 @@ namespace EmployeeManagement_BusinessLayer.Services
                  account = _mapper.Map<Account>(acc);
                 _context.Entry(account).State = EntityState.Added;
                 
-                _context.Accounts.Add(account);
+                await _context.Accounts.AddAsync(account);
+                await _context.SaveChangesAsync();
 
             }catch(Exception ex)
             {
@@ -61,7 +62,7 @@ namespace EmployeeManagement_BusinessLayer.Services
             };
         }
 
-        public bool DeleteAccount(int accID)
+        public async Task<bool> DeleteAccount(int accID)
         {
             try
             {
@@ -79,7 +80,7 @@ namespace EmployeeManagement_BusinessLayer.Services
                 _context.Entry(account).State = EntityState.Modified;
 
                 _context.Accounts.Update(account);
-                _context.SaveChanges();
+                await _context.SaveChangesAsync();
                 
             }catch(Exception ex)
             {
@@ -138,14 +139,14 @@ namespace EmployeeManagement_BusinessLayer.Services
         }
 
         //Login
-        public ResponseResult<AccountViewModel> Login(string username, string password)
+        public async Task<ResponseResult<AccountViewModel>> Login(string username, string password)
         {
             Account account = null;
 
             try
             {
 
-                account = _context.Accounts.FirstOrDefault(
+                account = await _context.Accounts.FirstOrDefaultAsync(
                     x => x.Username.Equals(username) 
                     && x.Password.Equals(password) && x.Status != 0);
                 
@@ -163,17 +164,17 @@ namespace EmployeeManagement_BusinessLayer.Services
             };
         }
 
-        public ResponseResult<AccountViewModel> Logout()
+        public Task<ResponseResult<AccountViewModel>> Logout()
         {
             throw new NotImplementedException();
         }
         //UpdateAccount
-        public ResponseResult<AccountViewModel> UpdateAccount(UpdateAccountRequestModel acc)
+        public async Task<ResponseResult<AccountViewModel>> UpdateAccount(UpdateAccountRequestModel acc)
         {
             try
             {
-                var findAccount = _context.Accounts
-                    .FirstOrDefault(x => x.AccountId == acc.AccountId && x.Status != 0);
+                var findAccount = await _context.Accounts
+                    .FirstOrDefaultAsync(x => x.AccountId == acc.AccountId && x.Status != 0);
 
                 if(findAccount == null)
                 {
@@ -185,9 +186,54 @@ namespace EmployeeManagement_BusinessLayer.Services
                 _context.Entry(findAccount).State = EntityState.Detached;               
                 _context.Entry(account).State = EntityState.Modified;
                 _context.Accounts.Update(account);
-                _context.SaveChanges();
+                await _context.SaveChangesAsync();
 
             }catch(Exception ex)
+            {
+                throw new Exception(Constraints.FAILED_UPDATE);
+            }
+
+            return new ResponseResult<AccountViewModel>()
+            {
+                Message = Constraints.SUC_UPDATE,
+                Value = _mapper.Map<AccountViewModel>(acc)
+            };
+        }
+
+        public async Task<ResponseResult<AccountViewModel>> UpdateAccountByManager(UpdateAccountByManagerRequestModel acc)
+        {
+            try
+            {
+                var findAccount = _context.Accounts
+                    .FirstOrDefault(x => x.AccountId == acc.AccountId && x.Status != 0);
+
+                if (findAccount == null)
+                {
+                    throw new Exception(Constraints.NOT_FOUND_ACCOUNT);
+                }
+                _context.Entry(findAccount).State = EntityState.Detached;
+                Account account = _mapper.Map<Account>(acc);
+                account.Status = 1;
+                if(account.EmployeeId == "")
+                {
+                    account.EmployeeId = null;
+                }
+                if (account.RoleCode == 0)
+                {
+                    account.RoleCode = null;
+                }
+                account.Password = findAccount.Password;
+                
+                _context.Entry(account).State = EntityState.Modified;
+                _context.Accounts.Update(account);
+                
+                await _context.SaveChangesAsync();
+                _context.Entry(account).State = EntityState.Detached;
+
+
+
+            }
+            catch (Exception ex)
             {
                 throw new Exception(Constraints.FAILED_UPDATE);
             }
